@@ -32,6 +32,7 @@ function game_loop() {
   window._offset.innerHTML = offset;
   window._fps.innerHTML = Math.floor(1000/elapsed);
   window._duration.innerHTML = Math.floor(duration);
+  window._entities.innerHTML = Math.floor(Entities.length);
   render(offset);
 }
 
