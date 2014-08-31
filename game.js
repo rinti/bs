@@ -15,13 +15,12 @@ player = {
     if (Key.isDown(37)) this.x += this.v * -1;
     if (Key.isDown(39)) this.x += this.v;
     if (Key.isDown(32)) console.log("Poop");
+    this.ox = this.x; this.oy = this.y;
   },
   render: function(offset) {
-    var rx = this.ox + (this.x - this.ox) * offset
+    var rx = this.ox + (this.x - this.ox) * offset;
     ctx.fillStyle = this.color;
     ctx.fillRect(rx, this.y, this.width, this.height);
-
-    this.ox = this.x; this.oy = this.y;
   }
 }
 addEntity(player);
@@ -43,7 +42,7 @@ function game_loop() {
       elapsed = current - start;
   start = current;
   lag += elapsed;
-  
+
   while (lag >= duration) {
     update();
     lag -= duration;
