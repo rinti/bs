@@ -5,5 +5,5 @@ function addEntity(entity) {
 }
 
 function removeEntity(entity) {
-  Entities.pop(entity)
+  Entities.pop(entity);
 }

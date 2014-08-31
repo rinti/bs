@@ -17,6 +17,7 @@ player = {
   },
   poop: function() {
     var poop = {
+      type: 'poop',
       width: 5, height: 5,
       x: this.x+(Math.floor(this.width/2)), y: this.y+this.height-1,
       oy: this.y,

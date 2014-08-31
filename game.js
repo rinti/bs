@@ -5,6 +5,17 @@ var start = Date.now(),
     canvas = window.game,
     ctx = canvas.getContext("2d");
 
+function isColliding(a, b) {
+  if (a === b) return false;
+  if(a.x < (b.x + b.width) &&
+    (a.x + a.width) > b.x &&
+     a.y < (b.y + b.height) &&
+    (a.y + a.height) > b.y) {
+    return true;
+  }
+  return false;
+}
+
 function update(offset) {
   for (var i=0; i < Entities.length; i++)
     Entities[i].update(offset);

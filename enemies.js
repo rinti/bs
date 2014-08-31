@@ -15,6 +15,12 @@ function makeEnemy(type, velocity, x, y, direction) {
         this.x += this.v;
       }
       this.ox = this.x; this.oy = this.y;
+      for (var i = 0; i < Entities.length; i++) {
+        if (Entities[i].type === 'poop') {
+          if(isColliding(this, Entities[i]))
+            console.log('ouch');
+        }
+      }
     },
     render: function(offset) {
       var rx = this.ox + (this.x - this.ox) * offset;
