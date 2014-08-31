@@ -31,7 +31,7 @@ function update(offset) {
 }
 
 function render(offset) {
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (var i=0; i < Entities.length; i++)
     Entities[i].render(offset);
 }
